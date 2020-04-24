@@ -13,3 +13,13 @@ for (let i = 0; i < auto.length;i++) {
         return out.innerHTML=auto * amount;
     }
 }
+// мы должжны получить какую кнопку мы кликнули у нас есть атррибут класс, и в баттонах допишем атриб дата
+let a = document.createElement('div');// создаем элемент div с пом JS
+a.innerHTML = 'Hello!';
+a.classList.add('classno');// с пом add добавляем класс classno
+a.onclick = function () {
+    alert('hello');
+}
+console.log(a);
+//создаем div class=test в HTML
+document.querySelector('.test').appendChild(a);
