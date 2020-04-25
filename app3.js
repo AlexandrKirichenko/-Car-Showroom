@@ -23,3 +23,26 @@ a.onclick = function () {
 console.log(a);
 //создаем div class=test в HTML
 document.querySelector('.test').appendChild(a);
+
+Шахматная доска(первый цикл for отвечает за строки, 2ой за их наполнение)
+for (let i = 0; i < 8; i++) {
+    let res = '';
+
+    if (i % 2) {
+      a = '#';
+      b = ' ';
+    } else {
+      a = ' ';
+      b = '#';
+    }
+
+    for (let j = 0; j < 8; j++) {
+      if (j % 2) {
+        res += a;
+      } else {
+        res += b;
+      }
+    }
+    console.log(res);
+    }
+    
