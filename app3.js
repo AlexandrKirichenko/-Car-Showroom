@@ -46,3 +46,13 @@ for (let i = 0; i < 8; i++) {
     console.log(res);
     }
     
+//Написать функцию , которая посимвольно выводит строку 'Hello' посимвольно
+const str = 'Hello';
+.toUpperCase() метод перевода вверхний регистр
+const pos =  (str) => {
+    for(let i=0;i<str.length;i++){
+        console.log(str[i]);
+    }
+    return str
+}
+pos(str);
