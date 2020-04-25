@@ -56,3 +56,63 @@ const pos =  (str) => {
     return str
 }
 pos(str);
+принять,сроку вернуть ввверх регистре
+const pos =  (str) => {
+  let res ='';
+  for(let i=0;i<str.length;i++){
+      res += str[i].toUpperCase()
+      
+  }
+  return res
+}
+console.log(pos(str));
+//принимает в себя строку и так называемый старт индекс и энд индекс и делает обрезку этой строки и возвращает обрезанную строку? И если нет послед параметра, вернем часть строки до конца, если нет првго 2го параметра врнем всю строку.Если последний параметр юольше длинны строки вернуть длинну строки
+const str = 'SoLongString'
+const cut = (str,t,h) => {
+    if (!h){
+        h = str.length;
+    }
+    let res='';
+    for(let i=t;i<h;i++){
+        res += str[i]
+    }
+    return res
+}
+console.log(cut(str,2,7));
+//с тернарником
+const str = 'SoLongString'
+const cut = (str,start,end) => {
+  
+    let res='';
+    for(let i=start?start:0; i < (end?(end>str.length?str.length:end):str.length);i++){ //если h есть, мы возвращаем h,если нет возвращаем длинну строкиважно не забыть скобки в тернарном выражении
+        res += str[i]
+    }
+    return res
+}
+console.log(cut(str,2,16));
+//написать функц кот. сравнит 2 строки,на предмет, что они одинаковы  посимвольно
+
+const comprasion = (str1,str2) => {
+    if (str1.length != str2.length) return false;
+    for(let i=0;i<str1.length;i++){
+        if (str1[i] != str2[i]) return false;
+      } 
+      return true
+  }
+//Есть строка и символ, Если мы находим символ внутри этой строки мы возвращаем позицию первого вхождения(индекс), если не находим возвращаем -1
+
+const foo = (str,char) => {
+    
+    for(let i=0;i<str.length;i++){
+      if (str[i] == char) return i;
+    } 
+    return i-1
+}
+
+const foo = (str,str2) => {
+    
+  for(let i=0;i<str.length;i++){
+    if (str[i] == str2[i]) return str2[0];
+  } 
+  return -1
+}
